@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Learning Beyond Barriers</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #fcebeb; font-family: 'Poppins', sans-serif; }
+        
+        .navbar { background-color: #7c90b1; }
+        .navbar-brand, .nav-link { color: white !important; }
+
+        .header-section { padding: 50px 0; text-align: center; }
+        .header-section h1 { font-family: 'Playfair Display'; color: #7c90b1; font-size: 2.5rem; }
+
+        /* Table Styling */
+        .service-container {
+            background-color: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            margin-bottom: 50px;
+        }
+
+        .table thead { background-color: #7c90b1; color: white; }
+        .table thead th { border: none; padding: 20px; }
+        .table thead th:first-child { border-radius: 15px 0 0 0; }
+        .table thead th:last-child { border-radius: 0 15px 0 0; }
+
+        /* Direct Link Subject Thumbnails */
+        .subject-link {
+            text-decoration: none;
+            display: inline-block;
+            transition: 0.3s ease;
+        }
+
+        .subject-thumbnail {
+            width: 140px; /* Slightly larger for better clicking */
+            height: 90px;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 3px solid transparent;
+            transition: 0.3s ease;
+        }
+
+        .subject-link:hover .subject-thumbnail {
+            transform: scale(1.08);
+            border-color: #7c90b1;
+            box-shadow: 0 8px 20px rgba(124, 144, 177, 0.3);
+        }
+
+        .subject-label {
+            display: block;
+            font-size: 0.85rem;
+            color: #7c90b1;
+            margin-top: 8px;
+            font-weight: 600;
+        }
+
+        .footer { background-color: #7c90b1; color: white; padding: 40px 0; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="its.html">Learning Beyond Barriers</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="providers.html">Providers</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="header-section">
+        <div class="container">
+            <h1>Our Educational Services</h1>
+            <p>Select a subject to go directly to enrollment.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="service-container">
+            <div class="table-responsive">
+                <table class="table table-hover text-center align-middle">
+                    <thead>
+                        <tr>
+                            <th class="py-4">Subjects</th>
+                            <th class="py-4">Tutors</th>
+                            <th class="py-4">Schedules</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="py-3">
+                                <a href="enroll.html?subject=math" class="subject-link">
+                                    <img src="math.jpg" alt="Modern Math" class="subject-thumbnail">
+                                    <span class="subject-label">Modern Math</span>
+                                </a>
+                            </td>
+                            <td class="py-3">Volunteers</td>
+                            <td class="py-3">Monday & Wednesday</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3">
+                                <a href="enroll.html?subject=language" class="subject-link">
+                                    <img src="english.jpg" alt="Language" class="subject-thumbnail">
+                                    <span class="subject-label">Language</span>
+                                </a>
+                            </td>
+                            <td class="py-3">Volunteers</td>
+                            <td class="py-3">Tuesday & Thursday</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3">
+                                <a href="enroll.html?subject=science" class="subject-link">
+                                    <img src="sci.jpg" alt="Science" class="subject-thumbnail">
+                                    <span class="subject-label">Science</span>
+                                </a>
+                            </td>
+                            <td class="py-3">Volunteers</td>
+                            <td class="py-3">Friday & Saturday</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="text-center mb-0">Learning Beyond Barriers &copy; 2026</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

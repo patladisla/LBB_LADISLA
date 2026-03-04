@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Beyond Barriers</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="homepage.css">
+    <style>
+        /* General scroll-friendly adjustments */
+        body { background-color: #fcebeb; }
+        
+        .navbar { background-color: #7c90b1; }
+        .navbar-brand, .nav-link { color: white !important; }
+
+        .hero-section { padding: 40px 0; text-align: center; }
+        .hero-section h1 { font-family: 'Playfair Display'; color: #7c90b1; }
+
+        /* Carousel Styling */
+        .carousel-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: 350px; 
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border: 2px solid #fff;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        /* Hover effect to show it's a clickable link */
+        .carousel-item a:hover img {
+            transform: scale(1.01);
+            filter: brightness(92%);
+        }
+
+        /* Layout tightening */
+        section { padding: 30px 0; }
+        
+        .clickable-card {
+            background: #fff1f1;
+            border-radius: 25px;
+            padding: 30px;
+            cursor: pointer;
+            transition: 0.3s;
+            border: none;
+        }
+        .clickable-card:hover { transform: scale(1.02); }
+
+        .footer { background-color: #7c90b1; color: white; padding: 40px 0; }
+        .footer a { color: white; text-decoration: none; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="its.html">Learning Beyond Barriers</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="providers.html">Providers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="testimonials.html">Testimonials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section">
+        <div class="container">
+            <h1>Learning Beyond Barriers</h1>
+            <p class="lead">Tutoring for All Ages</p>
+        </div>
+    </header>
+
+    <div class="container py-2 text-center carousel-container">
+        <div id="imageSlider" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="3000">
+                    <a href="about.html">
+                        <img src="tutor.jpg" alt="Tutoring class">
+                    </a>
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                    <a href="about.html">
+                        <img src="hi.jpg" alt="Math Session">
+                    </a>
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                    <a href="about.html">
+                        <img src="class.jpeg" alt="Learning Environment">
+                    </a>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#imageSlider" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#imageSlider" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+        </div>
+    </div>
+
+    <section id="about-preview" class="container text-center">
+        <p><i><u> Click images to know more <b>About us!</b></u></i></p>
+    </section>
+
+    <section id="services" class="services-overview">
+        <div class="container">
+            <h2 class="text-center mb-4">Our Services</h2>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-6">
+                    <div class="clickable-card text-center" onclick="window.location.href='services.html'">
+                        <h3>Schedule & Subjects Offered</h3>
+                        <p>Click here to view our flexible hours and core curriculum.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="providers-link" class="container text-center">
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <div class="clickable-card text-center py-4" onclick="window.location.href='providers.html'" style="border: 2px solid #7c90b1; background: white;">
+                    <h3>Meet Our Providers</h3>
+                    <p>Learn more about Patricia Ladisla and our Educational Support Group.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="testimonials-preview" class="testimonials-section">
+        <div class="container text-center">
+            <div class="clickable-card mx-auto" style="max-width: 600px;" onclick="window.location.href='testimonials.html'">
+                <h2 class="mb-4">Testimonials</h2>
+                <p>Feedbacks by our dear learners & parents.</p>
+                <p class="text-primary">Click to see all success stories &rarr;</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer mt-5">
+        <div class="container">
+            <div class="row g-5 text-md-start text-center">
+                <div class="col-md-4">
+                    <h5>Site Map</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="providers.html">Providers</a></li>
+                        <li><a href="#resources">Resources</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Developer Info</h5>
+                    <p><strong>Patricia G. Ladisla</strong><br>BSIT - BM14<br>School Year: 2025-2026</p>
+                </div>
+                <div class="col-md-4" id="contact-section">
+                    <h5>Contact Us</h5>
+                    <p><a href="contact.html">Send us a message</a><br>info@learningbeyond.com<br>patricialadisla@email.com</p>
+                </div>
+            </div>
+            <hr>
+            <p class="text-center mb-0">Learning Beyond Barriers &copy; 2026</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

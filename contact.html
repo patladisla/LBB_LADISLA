@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Learning Beyond Barriers</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        /* Consistent with its.html */
+        body { background-color: #fcebeb; font-family: 'Poppins', sans-serif; }
+        
+        .navbar { background-color: #7c90b1; }
+        .navbar-brand, .nav-link { color: white !important; }
+
+        .hero-section { padding: 40px 0; text-align: center; }
+        .hero-section h1 { font-family: 'Playfair Display'; color: #7c90b1; }
+
+        /* Inquiry Form Card */
+        .contact-card {
+            background: white;
+            border-radius: 25px;
+            padding: 40px;
+            border: 2px solid #7c90b1;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        }
+
+        .form-label { color: #7c90b1; font-weight: 600; }
+        
+        .form-control, .form-select {
+            border: 1px solid #7c90b1;
+            border-radius: 12px;
+            padding: 10px;
+        }
+
+        .btn-submit {
+            background-color: #7c90b1;
+            color: white;
+            border-radius: 50px;
+            padding: 10px 40px;
+            border: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn-submit:hover {
+            background-color: #5d6d88;
+            transform: scale(1.05);
+            color: white;
+        }
+
+        /* Map and Social Section */
+        .map-container {
+            border-radius: 25px;
+            overflow: hidden;
+            border: 4px solid white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            height: 300px;
+        }
+
+        .social-link {
+            font-size: 2rem;
+            color: #7c90b1;
+            margin-right: 20px;
+            transition: 0.3s;
+        }
+        .social-link:hover { color: #5d6d88; transform: translateY(-3px); }
+
+        .footer { background-color: #7c90b1; color: white; padding: 40px 0; margin-top: 50px; }
+        .footer a { color: white; text-decoration: none; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="its.html">Learning Beyond Barriers</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="providers.html">Providers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section">
+        <div class="container">
+            <h1>Contact & Inquiry</h1>
+            <p class="lead">Have a question or feedback? We're here to help!</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="row g-5">
+            
+            <div class="col-lg-7">
+                <div class="contact-card">
+                    <h3 class="mb-4" style="color: #7c90b1;">Send us an Inquiry</h3>
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label">Full Name</label>
+                            <input type="text" class="form-control" placeholder="Enter your name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Email Address</label>
+                            <input type="email" class="form-control" placeholder="name@example.com" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Subject</label>
+                            <select class="form-select">
+                                <option selected>General Feedback</option>
+                                <option value="1">Tutoring Services</option>
+                                <option value="2">Enrollment Inquiry</option>
+                                <option value="3">Others</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Message</label>
+                            <textarea class="form-control" rows="5" placeholder="Your message here..." required></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-submit">Submit Inquiry</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-lg-5">
+                <div class="mb-4">
+                    <h3 style="color: #7c90b1;">Our Location</h3>
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15456.467341814125!2d121.0336215!3d14.4206583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d02580a5996f%3A0x6731997d91e847c5!2sMuntinlupa%2C%20Metro%20Manila!5e0!3m2!1sen!2sph!4v1700000000000!5m2!1sen!2sph" 
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+
+                <div class="contact-card mt-4">
+                    <h4 style="color: #7c90b1;">Reach Out to Us</h4>
+                    <p>Reach out to us at our social media platforms:</p>
+                    <div class="d-flex mb-4">
+                        <a href="#" class="social-link"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-twitter-x"></i></a>
+                    </div>
+                    <hr>
+                    <p class="mb-1"><strong>Email:</strong> info@learningbeyond.com</p>
+                    <p><strong>Dev:</strong> patricialadisla@email.com</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="footer mt-5">
+        <div class="container text-center">
+            <p><strong>Patricia G. Ladisla</strong> | BSIT - BM14</p>
+            <p>Learning Beyond Barriers &copy; 2026</p>
+            <a href="its.html" style="text-decoration: underline;">Back to Homepage</a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

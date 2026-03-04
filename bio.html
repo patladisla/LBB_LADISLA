@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Learning Beyond Barriers</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #fcebeb; font-family: 'Poppins', sans-serif; min-height: 100vh; display: flex; flex-direction: column; }
+        
+        .bio-card {
+            background: white; border-radius: 20px; padding: 50px;
+            border: 2px solid #f7d1d1; margin-top: 50px; margin-bottom: 50px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+        
+        /* Square Profile Image Styles */
+        .profile-img-square {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 15px;
+            border: 5px solid #fff;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            margin-bottom: 25px;
+            background-color: #eee; /* Light gray if image fails to load */
+        }
+
+        .bio-name { font-family: 'Playfair Display', serif; color: #7c90b1; font-size: 3.2rem; margin-bottom: 5px; }
+        .role-tag { letter-spacing: 2px; text-transform: uppercase; color: #2c3e50; font-weight: 600; font-size: 1rem; }
+        .back-link { color: #7c90b1; text-decoration: none; font-weight: 600; display: inline-block; transition: 0.3s; margin-bottom: 20px; }
+        .back-link:hover { color: #2c3e50; }
+
+        /* Gallery */
+        .gallery-item {
+            overflow: hidden; border-radius: 12px; cursor: pointer;
+            height: 180px; border: 3px solid #fff; transition: 0.3s;
+        }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
+        .gallery-item:hover img { transform: scale(1.1); }
+        
+        #lightbox {
+            display: none; position: fixed; z-index: 9999;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.9); align-items: center; justify-content: center;
+        }
+        #lightbox img { max-width: 85%; max-height: 80%; border-radius: 10px; }
+        .close-lightbox { position: absolute; top: 20px; right: 30px; color: white; font-size: 40px; cursor: pointer; }
+
+        footer { background-color: #7c90b1; padding: 15px 0; color: white; margin-top: auto; text-align: center; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar" style="background-color: #7c90b1; padding: 15px;">
+        <div class="container">
+            <a class="navbar-brand text-white" href="index.html">Learning Beyond Barriers</a>
+        </div>
+    </nav>
+
+    <div class="container bio-container">
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <div class="bio-card">
+                    <a href="providers.html" class="back-link">← Back to Providers</a>
+                    
+                    <div class="row align-items-center">
+                        <div class="col-lg-4 text-center">
+                            <img id="profileImg" src="" class="profile-img-square" alt="Profile Image">
+                        </div>
+                        
+                        <div class="col-lg-8">
+                            <h1 id="displayName" class="bio-name">Loading...</h1>
+                            <p id="displayRole" class="role-tag"></p>
+                            <hr style="width: 60px; height: 4px; background-color: #a8d1df; opacity: 1; border: none;">
+                            <div id="bioContent" class="mt-4"></div>
+                        </div>
+                    </div>
+
+                    <hr class="my-5">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="lightbox" onclick="closeLightbox()">
+        <span class="close-lightbox">&times;</span>
+        <img id="lightboxImg" src="">
+    </div>
+
+    <footer>
+        <p class="mb-0">Learning Beyond Barriers &copy; 2026</p>
+    </footer>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const user = urlParams.get('user');
+
+        const data = {
+            'patricia': {
+                name: "Patricia Ladisla",
+                role: "Owner & Lead Provider",
+                image: "pat.jpg",
+                bio: "<p>Patricia “Pat” Ladisla, a Bachelor of Science in Information Technology (BSIT) student at Mapúa University, founded this tutoring company with a strong belief that education should never be a privilege, but a right. Inspired by her passion for learning and technology, she aims to create opportunities for students to grow, gain confidence, and reach their full potential through accessible and quality tutoring.</p>"
+            },
+            'team': {
+                name: "LBB Team",
+                role: "Support Group",
+                image: "owl.jpg", 
+                bio: "<p>The LBB Team is composed of passion driven individuals who share one mission — to make quality education accessible to everyone.</p>"
+            }
+        };
+
+        if (data[user]) {
+            document.getElementById('displayName').innerText = data[user].name;
+            document.getElementById('displayRole').innerText = data[user].role;
+            document.getElementById('profileImg').src = data[user].image;
+            document.getElementById('bioContent').innerHTML = data[user].bio;
+        } else {
+        
+            window.location.href = 'providers.html';
+        }
+
+        function openLightbox(src) {
+            document.getElementById('lightboxImg').src = src;
+            document.getElementById('lightbox').style.display = 'flex';
+        }
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
